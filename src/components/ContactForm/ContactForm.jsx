@@ -27,31 +27,34 @@ export default class ContactForm extends Component  {
   };
   render() {
     return (
+      <>
       <form className={styles.TaskEditor} onSubmit={this.handleSubmit}>
-        <label className={styles.TaskEditor_label}>
-          Name
+          <label htmlFor="name" className={styles.TaskEditor_label} >Name</label>
+          <br/>
           <input
+            id="name"
             className={styles.TaskEditor_input}
             type="text"
             name="name"
             value={this.state.name}
-            onChange={this.handleChange}
-          />
-        </label>
-        <label className={styles.TaskEditor_label}>
-          Number
+            onChange={this.handleChange}/>
+          <br/>
+        
+          <label htmlFor="number" className={styles.TaskEditor_label} >Number</label>
+          <br/>
           <input
+            id="number"
             className={styles.TaskEditor_input}
             type="text"
             name="number"
             value={this.state.number}
-            onChange={this.handleChange}
-          />
-        </label>
+            onChange={this.handleChange}/>
+          <br/>
         <button className={styles.TaskEditor_button} type="submit">
           Add contact
         </button>
-      </form>
+        </form>
+        </>
     );
   }
 }

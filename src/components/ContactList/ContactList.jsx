@@ -2,8 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import styles from "./ContactList";
 
-  const ContactList = ({ contacts, onRemoveContact }) => {
-    <ul className={styles.TaskList}>
+const ContactList = ({ contacts, onRemoveContact }) => {
+             
+    return <ul className={styles.TaskList}>
         {contacts.map((contact) => (
             <li className={styles.TaskList_item} key={contact.id}>
                 {contact.name + ":" + contact.number}
@@ -23,6 +24,7 @@ import styles from "./ContactList";
 };
 
 ContactList.propTypes = {
+    
   onRemoveContact: PropTypes.func.isRequired,
   contacts: PropTypes.arrayOf(PropTypes.shape({
       id: PropTypes.string.isRequired,

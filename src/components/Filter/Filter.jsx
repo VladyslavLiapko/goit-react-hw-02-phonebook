@@ -5,7 +5,7 @@ export default function Filter ({ value, onChangeFilter }) {
     
     return (
         <div>
-            Find contacts by name
+            <label>Find contacts by name: </label>
             <input
                 type="text"
                 value={value}
@@ -17,6 +17,6 @@ export default function Filter ({ value, onChangeFilter }) {
 
 
 Filter.propTypes = {
-  value: PropTypes.string.isRequired,
+  value: PropTypes.any,
   onchangeFilter: PropTypes.func.isRequired,
 };
